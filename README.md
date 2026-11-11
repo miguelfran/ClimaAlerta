@@ -228,7 +228,7 @@ Pela linha de comando:
 
 ## 🔗 Repositório
 
-🔗 _Adicionar o link do GitHub aqui._
+🔗 https://github.com/miguelfran/ClimaAlerta
 
 ## 👨‍💻 Desenvolvedor
 
