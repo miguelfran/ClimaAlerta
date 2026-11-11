@@ -2,10 +2,6 @@ package br.com.fiap.climaalerta.data.local
 
 import br.com.fiap.climaalerta.domain.model.City
 
-/**
- * Cidades monitoradas no primeiro uso, para o painel não iniciar vazio.
- * IDs e coordenadas iguais aos retornados pela Geocoding API da Open-Meteo.
- */
 object DefaultCities {
     val cities = listOf(
         City(3448439, "São Paulo", "São Paulo", "Brasil", -23.5475, -46.63611),

@@ -24,7 +24,6 @@ import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import java.text.Normalizer
 
-/** Filtros do painel pela escala de risco (null = todas). */
 enum class RiskFilter(val level: RiskLevel?) {
     ALL(null),
     GREAT_DANGER(RiskLevel.GREAT_DANGER),
@@ -35,7 +34,6 @@ enum class RiskFilter(val level: RiskLevel?) {
     fun matches(riskLevel: RiskLevel): Boolean = level == null || level == riskLevel
 }
 
-/** Resumo exibido no topo do painel. */
 data class DashboardSummary(
     val monitoredCount: Int,
     val citiesWithAlerts: Int,
@@ -51,15 +49,11 @@ data class HomeUiState(
     val isRefreshing: Boolean = false
 )
 
-/**
- * Painel: carrega o tempo das cidades favoritas e aplica busca e filtro por risco.
- */
 class HomeViewModel(
     private val favoritesRepository: FavoritesRepository,
     private val weatherRepository: WeatherRepository
 ) : ViewModel() {
 
-    /** Texto do filtro; mantido como estado do Compose para o TextField responder sem atraso. */
     var query by mutableStateOf("")
         private set
 
@@ -89,7 +83,6 @@ class HomeViewModel(
     )
 
     init {
-        // Recarrega sempre que a lista de favoritas muda (inclusive quando alterada em outra tela).
         favoritesRepository.favorites
             .onEach { cities -> loadWeather(cities, forceRefresh = false) }
             .launchIn(viewModelScope)
@@ -157,7 +150,6 @@ class HomeViewModel(
     }
 }
 
-/** Remove acentos e caixa para a busca: "são" encontra "Sao" e vice-versa. */
 internal fun String.normalizeForSearch(): String =
     Normalizer.normalize(trim().lowercase(), Normalizer.Form.NFD)
         .replace(Regex("\\p{Mn}+"), "")

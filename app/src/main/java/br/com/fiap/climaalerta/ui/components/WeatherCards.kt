@@ -46,7 +46,6 @@ import br.com.fiap.climaalerta.ui.theme.BrandBlue
 import br.com.fiap.climaalerta.ui.theme.BrandBlueDark
 import kotlin.math.roundToInt
 
-/** Card de destaque com o tempo atual da cidade. */
 @Composable
 fun CurrentWeatherCard(
     current: CurrentWeather,
@@ -135,7 +134,6 @@ fun CurrentWeatherCard(
     }
 }
 
-/** Indicador pequeno (ícone + valor + rótulo). */
 @Composable
 fun MetricItem(
     icon: ImageVector,
@@ -156,7 +154,6 @@ fun MetricItem(
     }
 }
 
-/** Lista da previsão diária agrupada em um card. */
 @Composable
 fun DailyForecastCard(days: List<DailyForecast>, modifier: Modifier = Modifier) {
     Card(
@@ -181,7 +178,6 @@ fun DailyForecastCard(days: List<DailyForecast>, modifier: Modifier = Modifier) 
     }
 }
 
-/** Linha com a previsão de um dia. */
 @Composable
 fun DailyForecastRow(forecast: DailyForecast, modifier: Modifier = Modifier) {
     Row(

@@ -65,9 +65,6 @@ import br.com.fiap.climaalerta.ui.theme.BrandBlueDark
 import br.com.fiap.climaalerta.ui.theme.Dimens
 import kotlinx.coroutines.launch
 
-/**
- * Painel: cidades monitoradas com tempo atual e nível de risco.
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(
@@ -81,7 +78,6 @@ fun HomeScreen(
     val removedMessageTemplate = stringResource(R.string.home_city_removed)
     val undoLabel = stringResource(R.string.action_undo)
 
-    // Remove a cidade e oferece "Desfazer" em um Snackbar.
     val onRemoveCity: (City) -> Unit = { city ->
         viewModel.onToggleFavorite(city)
         scope.launch {
@@ -220,7 +216,6 @@ private fun HomeContent(
     }
 }
 
-/** Card-resumo com a situação geral das cidades monitoradas. */
 @Composable
 private fun RiskSummaryCard(summary: DashboardSummary, modifier: Modifier = Modifier) {
     Card(

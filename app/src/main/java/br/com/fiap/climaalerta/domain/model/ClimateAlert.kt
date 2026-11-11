@@ -2,10 +2,6 @@ package br.com.fiap.climaalerta.domain.model
 
 import java.time.LocalDate
 
-/**
- * Escala de risco inspirada nos avisos meteorológicos do INMET.
- * A ordem dos itens importa: quanto maior o ordinal, maior o risco.
- */
 enum class RiskLevel(val label: String) {
     NONE("Sem alertas"),
     POTENTIAL_DANGER("Perigo potencial"),
@@ -13,7 +9,6 @@ enum class RiskLevel(val label: String) {
     GREAT_DANGER("Grande perigo")
 }
 
-/** Tipos de evento climático monitorados e a orientação básica para cada um. */
 enum class AlertType(val label: String, val recommendation: String) {
     HEAVY_RAIN(
         label = "Chuvas intensas",
@@ -51,21 +46,16 @@ enum class AlertType(val label: String, val recommendation: String) {
     )
 }
 
-/**
- * Alerta consolidado de um tipo de evento para uma cidade, cobrindo o período em que ele ocorre.
- */
 data class ClimateAlert(
     val type: AlertType,
     val level: RiskLevel,
     val startDate: LocalDate,
     val endDate: LocalDate,
-    /** Quantidade de dias do período em que o evento está previsto. */
     val activeDays: Int,
     val peakValue: Double,
     val description: String
 )
 
-/** Alerta associado à cidade de origem (usado na central de alertas). */
 data class CityAlert(
     val city: City,
     val alert: ClimateAlert

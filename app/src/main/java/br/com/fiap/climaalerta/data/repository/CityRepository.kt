@@ -7,7 +7,6 @@ import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
-/** Busca de cidades pelo nome. */
 interface CityRepository {
     suspend fun searchCities(query: String): List<City>
 }
@@ -21,7 +20,6 @@ class CityRepositoryImpl(
         geocodingApi.searchCities(query.trim())
             .results
             .orEmpty()
-            // Mantém apenas localidades habitadas (códigos PPL*), descartando aeroportos, rios etc.
             .filter { it.featureCode?.startsWith(POPULATED_PLACE_PREFIX) ?: true }
             .mapNotNull { it.toDomainOrNull() }
             .distinctBy { it.id }

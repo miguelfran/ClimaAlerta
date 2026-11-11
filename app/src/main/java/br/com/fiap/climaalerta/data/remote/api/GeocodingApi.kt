@@ -4,10 +4,6 @@ import br.com.fiap.climaalerta.data.remote.dto.GeocodingResponseDto
 import retrofit2.http.GET
 import retrofit2.http.Query
 
-/**
- * Open-Meteo Geocoding API: busca cidades pelo nome.
- * Documentação: https://open-meteo.com/en/docs/geocoding-api
- */
 interface GeocodingApi {
 
     @GET("v1/search")

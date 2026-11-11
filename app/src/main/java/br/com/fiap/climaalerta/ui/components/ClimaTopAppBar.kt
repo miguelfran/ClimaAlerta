@@ -18,10 +18,6 @@ import androidx.compose.ui.text.style.TextOverflow
 import br.com.fiap.climaalerta.R
 import br.com.fiap.climaalerta.ui.theme.BarColors
 
-/**
- * TopAppBar padrão do app, reutilizada por todas as telas principais.
- * Exibe a seta de voltar apenas quando [onNavigateBack] é informado.
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ClimaTopAppBar(

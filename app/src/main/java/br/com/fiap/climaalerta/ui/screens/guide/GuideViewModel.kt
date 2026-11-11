@@ -16,9 +16,6 @@ data class GuideUiState(
     val showOnboardingOnStart: Boolean = false
 )
 
-/**
- * Orientações: telefones úteis, dicas por tipo de evento e a preferência da introdução.
- */
 class GuideViewModel(
     private val userPreferences: UserPreferences,
     safetyGuideRepository: SafetyGuideRepository
@@ -33,7 +30,6 @@ class GuideViewModel(
     )
     val uiState: StateFlow<GuideUiState> = _uiState.asStateFlow()
 
-    /** Liga/desliga a exibição da introdução na próxima abertura do app (SharedPreferences). */
     fun onShowOnboardingChange(show: Boolean) {
         userPreferences.setOnboardingSeen(!show)
         _uiState.update { it.copy(showOnboardingOnStart = show) }

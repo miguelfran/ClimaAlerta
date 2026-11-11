@@ -1,8 +1,5 @@
 package br.com.fiap.climaalerta.domain.model
 
-/**
- * Condição do tempo derivada do código WMO retornado pela Open-Meteo.
- */
 enum class WeatherCondition(val description: String) {
     CLEAR("Céu limpo"),
     PARTLY_CLOUDY("Parcialmente nublado"),
@@ -17,7 +14,6 @@ enum class WeatherCondition(val description: String) {
     UNKNOWN("Indefinido");
 
     companion object {
-        /** Tabela de códigos WMO: https://open-meteo.com/en/docs (seção "WMO Weather interpretation codes"). */
         fun fromWmoCode(code: Int?): WeatherCondition = when (code) {
             0 -> CLEAR
             1, 2 -> PARTLY_CLOUDY

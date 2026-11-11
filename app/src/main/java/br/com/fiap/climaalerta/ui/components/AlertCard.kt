@@ -42,12 +42,6 @@ import br.com.fiap.climaalerta.ui.model.formatPeriod
 import br.com.fiap.climaalerta.ui.model.icon
 import br.com.fiap.climaalerta.ui.model.onColor
 
-/**
- * Card de alerta climático, reutilizado no Detalhe da cidade e na central de Alertas.
- *
- * @param cityName exibido quando o alerta aparece fora do contexto da cidade.
- * @param onClick ação ao tocar no card; se nulo, o toque expande as orientações.
- */
 @Composable
 fun AlertCard(
     alert: ClimateAlert,
@@ -68,7 +62,6 @@ fun AlertCard(
         elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
     ) {
         Row(modifier = Modifier.height(IntrinsicSize.Min)) {
-            // Faixa lateral com a cor do nível de risco
             Box(
                 modifier = Modifier
                     .width(6.dp)

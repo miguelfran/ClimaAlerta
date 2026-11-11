@@ -54,9 +54,6 @@ import br.com.fiap.climaalerta.ui.theme.BrandBlueDark
 import br.com.fiap.climaalerta.ui.theme.ClimaAlertaTheme
 import kotlinx.coroutines.launch
 
-/**
- * Introdução ao app em páginas, com botões Voltar/Avançar e a opção de não exibir novamente.
- */
 @Composable
 fun OnboardingScreen(
     onFinish: () -> Unit,

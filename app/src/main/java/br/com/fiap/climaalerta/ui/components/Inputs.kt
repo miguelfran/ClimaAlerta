@@ -32,7 +32,6 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import br.com.fiap.climaalerta.R
 
-/** Campo de busca reutilizado no Painel (filtro) e na tela de Busca. */
 @Composable
 fun SearchTextField(
     query: String,
@@ -71,10 +70,6 @@ fun SearchTextField(
     )
 }
 
-/**
- * Linha horizontal de chips de filtro com seleção única.
- * Genérica para ser reutilizada com qualquer tipo de opção.
- */
 @Composable
 fun <T> SelectableChipRow(
     options: List<T>,
@@ -111,7 +106,6 @@ fun <T> SelectableChipRow(
     }
 }
 
-/** Título de seção com conteúdo opcional à direita. */
 @Composable
 fun SectionTitle(
     text: String,

@@ -36,7 +36,6 @@ import br.com.fiap.climaalerta.ui.model.icon
 import br.com.fiap.climaalerta.ui.model.onColor
 import br.com.fiap.climaalerta.ui.theme.BrandAmber
 
-/** Selo colorido com o nível de risco (escala INMET). */
 @Composable
 fun RiskBadge(level: RiskLevel, modifier: Modifier = Modifier) {
     Surface(
@@ -56,7 +55,6 @@ fun RiskBadge(level: RiskLevel, modifier: Modifier = Modifier) {
     }
 }
 
-/** Ícone dentro de um círculo colorido; usado para clima, alertas e locais. */
 @Composable
 fun CircleIcon(
     icon: ImageVector,
@@ -82,7 +80,6 @@ fun CircleIcon(
     }
 }
 
-/** Ícone da condição do tempo em destaque. */
 @Composable
 fun WeatherIconBadge(
     condition: WeatherCondition,
@@ -98,7 +95,6 @@ fun WeatherIconBadge(
     )
 }
 
-/** Botão de favoritar com animação e mudança de cor/ícone conforme o estado. */
 @Composable
 fun FavoriteIconButton(
     isFavorite: Boolean,

@@ -2,13 +2,11 @@ package br.com.fiap.climaalerta.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-// Identidade visual: azul (céu/confiança), verde-água (prevenção) e âmbar (atenção).
 val BrandBlue = Color(0xFF0B5FA5)
 val BrandBlueDark = Color(0xFF073E6E)
 val BrandTeal = Color(0xFF00897B)
 val BrandAmber = Color(0xFFFFB300)
 
-// Esquema claro
 val LightPrimary = BrandBlue
 val LightOnPrimary = Color(0xFFFFFFFF)
 val LightPrimaryContainer = Color(0xFFD3E4FF)
@@ -31,7 +29,6 @@ val LightSurfaceContainer = Color(0xFFEAEFF6)
 val LightSurfaceContainerHigh = Color(0xFFE4E9F1)
 val LightSurfaceContainerHighest = Color(0xFFDEE3EB)
 
-// Esquema escuro
 val DarkPrimary = Color(0xFFA3C9FF)
 val DarkOnPrimary = Color(0xFF00315E)
 val DarkPrimaryContainer = Color(0xFF004785)
@@ -54,7 +51,6 @@ val DarkSurfaceContainer = Color(0xFF1C2025)
 val DarkSurfaceContainerHigh = Color(0xFF272A30)
 val DarkSurfaceContainerHighest = Color(0xFF32353B)
 
-// Cores da escala de risco (padrão de cores dos avisos do INMET)
 val RiskNone = Color(0xFF2E7D32)
 val RiskPotentialDanger = Color(0xFFF9C80E)
 val RiskDanger = Color(0xFFEF6C00)

@@ -47,9 +47,6 @@ import br.com.fiap.climaalerta.ui.model.color
 import br.com.fiap.climaalerta.ui.model.onColor
 import br.com.fiap.climaalerta.ui.theme.Dimens
 
-/**
- * Central de alertas de todas as cidades monitoradas.
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AlertsScreen(
@@ -158,7 +155,6 @@ private fun AlertsContent(
     }
 }
 
-/** Contador de alertas de um nível de risco. */
 @Composable
 private fun LevelCountCard(level: RiskLevel, count: Int, modifier: Modifier = Modifier) {
     Card(

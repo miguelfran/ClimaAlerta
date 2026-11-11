@@ -17,9 +17,6 @@ import br.com.fiap.climaalerta.data.repository.WeatherRepository
 import br.com.fiap.climaalerta.data.repository.WeatherRepositoryImpl
 import br.com.fiap.climaalerta.domain.usecase.EvaluateClimateAlertsUseCase
 
-/**
- * Injeção de dependências manual: cria uma única instância de cada dependência do app.
- */
 class AppContainer(context: Context) {
 
     private val appContext = context.applicationContext

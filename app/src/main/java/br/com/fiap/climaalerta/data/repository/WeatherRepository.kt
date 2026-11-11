@@ -13,16 +13,11 @@ import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.withContext
 import java.util.concurrent.ConcurrentHashMap
 
-/** Fonte única da previsão do tempo e dos alertas de cada cidade. */
 interface WeatherRepository {
     suspend fun getCityWeather(city: City, forceRefresh: Boolean = false): CityWeather
     suspend fun getCitiesWeather(cities: List<City>, forceRefresh: Boolean = false): List<CityWeather>
 }
 
-/**
- * Busca a previsão na Open-Meteo, aplica as regras de alerta e guarda o resultado em cache
- * por alguns minutos para que o Painel, os Alertas e o Detalhe não repitam a mesma requisição.
- */
 class WeatherRepositoryImpl(
     private val forecastApi: ForecastApi,
     private val evaluateClimateAlerts: EvaluateClimateAlertsUseCase,
@@ -48,7 +43,6 @@ class WeatherRepositoryImpl(
         }
     }
 
-    /** Busca várias cidades em paralelo. */
     override suspend fun getCitiesWeather(cities: List<City>, forceRefresh: Boolean): List<CityWeather> =
         coroutineScope {
             cities.map { city -> async { getCityWeather(city, forceRefresh) } }.awaitAll()

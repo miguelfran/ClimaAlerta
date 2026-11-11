@@ -4,10 +4,6 @@ import br.com.fiap.climaalerta.data.remote.dto.ForecastResponseDto
 import retrofit2.http.GET
 import retrofit2.http.Query
 
-/**
- * Open-Meteo Forecast API (REST pública, sem chave de acesso).
- * Documentação: https://open-meteo.com/en/docs
- */
 interface ForecastApi {
 
     @GET("v1/forecast")

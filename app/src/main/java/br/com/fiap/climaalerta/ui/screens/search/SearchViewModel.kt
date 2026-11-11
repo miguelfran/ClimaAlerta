@@ -24,9 +24,6 @@ data class SearchUiState(
     val favoriteIds: Set<Long> = emptySet()
 )
 
-/**
- * Busca cidades na Geocoding API enquanto o usuário digita (com debounce).
- */
 class SearchViewModel(
     private val cityRepository: CityRepository,
     private val favoritesRepository: FavoritesRepository
@@ -54,7 +51,6 @@ class SearchViewModel(
         scheduleSearch(delayMillis = DEBOUNCE_MILLIS)
     }
 
-    /** Busca imediata (botão de pesquisa do teclado). */
     fun onSearch() = scheduleSearch(delayMillis = 0)
 
     fun retry() = scheduleSearch(delayMillis = 0)

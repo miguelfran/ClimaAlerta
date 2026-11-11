@@ -2,10 +2,6 @@ package br.com.fiap.climaalerta.data.remote.dto
 
 import com.google.gson.annotations.SerializedName
 
-/**
- * Resposta do endpoint GET /v1/forecast da Open-Meteo.
- * Os campos são anuláveis porque o Gson não respeita a nulidade do Kotlin.
- */
 data class ForecastResponseDto(
     @SerializedName("latitude") val latitude: Double?,
     @SerializedName("longitude") val longitude: Double?,
@@ -25,7 +21,6 @@ data class CurrentWeatherDto(
     @SerializedName("is_day") val isDay: Int?
 )
 
-/** A Open-Meteo devolve a previsão diária em listas paralelas (uma posição por dia). */
 data class DailyForecastDto(
     @SerializedName("time") val time: List<String>?,
     @SerializedName("weather_code") val weatherCode: List<Int?>?,

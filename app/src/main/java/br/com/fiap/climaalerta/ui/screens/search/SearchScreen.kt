@@ -32,9 +32,6 @@ import br.com.fiap.climaalerta.ui.components.SearchTextField
 import br.com.fiap.climaalerta.ui.model.UiState
 import br.com.fiap.climaalerta.ui.theme.Dimens
 
-/**
- * Busca de cidades: demonstra os quatro estados (inicial, carregando, sucesso e erro).
- */
 @Composable
 fun SearchScreen(
     onCityClick: (City) -> Unit,

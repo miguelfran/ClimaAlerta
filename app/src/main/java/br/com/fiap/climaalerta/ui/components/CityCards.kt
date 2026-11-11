@@ -32,10 +32,6 @@ import br.com.fiap.climaalerta.ui.model.color
 import br.com.fiap.climaalerta.ui.model.toPopulationLabel
 import br.com.fiap.climaalerta.ui.model.toTemperatureLabel
 
-/**
- * Card de uma cidade monitorada com tempo atual, máxima/mínima e nível de risco.
- * Clique abre o detalhe; a estrela favorita/desfavorita.
- */
 @Composable
 fun CityWeatherCard(
     cityWeather: CityWeather,
@@ -115,7 +111,6 @@ fun CityWeatherCard(
     }
 }
 
-/** Item de resultado da busca de cidades. */
 @Composable
 fun CityListItem(
     city: City,

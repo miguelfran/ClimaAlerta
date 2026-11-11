@@ -2,10 +2,6 @@ package br.com.fiap.climaalerta.data.remote.dto
 
 import com.google.gson.annotations.SerializedName
 
-/**
- * Resposta do endpoint GET /v1/search da Open-Meteo Geocoding API.
- * Quando nenhuma cidade é encontrada, o campo "results" não vem no JSON.
- */
 data class GeocodingResponseDto(
     @SerializedName("results") val results: List<GeocodingResultDto>?
 )

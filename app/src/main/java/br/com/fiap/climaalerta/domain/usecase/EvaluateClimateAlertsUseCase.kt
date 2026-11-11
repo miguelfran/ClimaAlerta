@@ -9,14 +9,6 @@ import br.com.fiap.climaalerta.domain.model.WeatherForecast
 import java.time.LocalDate
 import java.util.Locale
 
-/**
- * Regra de negócio central do app: transforma a previsão diária recebida do WebService
- * em alertas climáticos para o cidadão.
- *
- * Os limiares foram simplificados a partir dos critérios de aviso do INMET
- * (perigo potencial, perigo e grande perigo). Quando o mesmo evento ocorre em vários dias,
- * ele é consolidado em um único alerta com o pior nível e o valor de pico do período.
- */
 class EvaluateClimateAlertsUseCase {
 
     operator fun invoke(forecast: WeatherForecast): List<ClimateAlert> =
@@ -26,7 +18,6 @@ class EvaluateClimateAlertsUseCase {
             .map { (type, occurrences) -> consolidate(type, occurrences) }
             .sortedWith(compareByDescending<ClimateAlert> { it.level }.thenBy { it.startDate })
 
-    /** Ocorrência de um evento em um único dia, antes da consolidação. */
     private data class Occurrence(
         val type: AlertType,
         val level: RiskLevel,
@@ -59,7 +50,6 @@ class EvaluateClimateAlertsUseCase {
     }
 
     private fun consolidate(type: AlertType, occurrences: List<Occurrence>): ClimateAlert {
-        // Para frio e umidade, o "pior" valor é o menor; para os demais, o maior.
         val lowerIsWorse = type == AlertType.INTENSE_COLD || type == AlertType.LOW_HUMIDITY
         val peak = if (lowerIsWorse) occurrences.minOf { it.value } else occurrences.maxOf { it.value }
         val level = occurrences.maxOf { it.level }

@@ -26,9 +26,6 @@ data class CityDetailUiState(
     val isRefreshing: Boolean = false
 )
 
-/**
- * Detalhe da cidade: lê os argumentos da rota pelo SavedStateHandle e busca a previsão.
- */
 class CityDetailViewModel(
     savedStateHandle: SavedStateHandle,
     private val weatherRepository: WeatherRepository,

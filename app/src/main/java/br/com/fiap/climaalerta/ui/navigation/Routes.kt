@@ -3,10 +3,6 @@ package br.com.fiap.climaalerta.ui.navigation
 import br.com.fiap.climaalerta.domain.model.City
 import kotlinx.serialization.Serializable
 
-/*
- * Rotas do Navigation Compose com segurança de tipos (kotlinx.serialization).
- */
-
 @Serializable
 data object SplashRoute
 
@@ -25,7 +21,6 @@ data object AlertsRoute
 @Serializable
 data object GuideRoute
 
-/** Detalhe de uma cidade: recebe os dados necessários para consultar a previsão. */
 @Serializable
 data class CityDetailRoute(
     val cityId: Long,

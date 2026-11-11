@@ -4,10 +4,6 @@ import br.com.fiap.climaalerta.domain.model.AlertType
 import br.com.fiap.climaalerta.domain.model.EmergencyContact
 import br.com.fiap.climaalerta.domain.model.SafetyTopic
 
-/**
- * Conteúdo fixo de orientações, baseado nas recomendações da Defesa Civil.
- * Fica disponível mesmo sem internet.
- */
 class SafetyGuideLocalDataSource {
 
     fun getEmergencyContacts(): List<EmergencyContact> = listOf(

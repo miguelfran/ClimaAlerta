@@ -10,7 +10,6 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 
-/** Conteúdo de uma página da introdução. */
 data class OnboardingPage(
     @param:DrawableRes val imageRes: Int,
     @param:StringRes val titleRes: Int,
@@ -40,10 +39,6 @@ private val defaultOnboardingPages = listOf(
     )
 )
 
-/**
- * Controla a opção "não mostrar novamente" e salva a escolha no SharedPreferences
- * quando o usuário finaliza a introdução.
- */
 class OnboardingViewModel(private val userPreferences: UserPreferences) : ViewModel() {
 
     private val _uiState = MutableStateFlow(OnboardingUiState())

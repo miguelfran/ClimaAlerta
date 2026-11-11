@@ -7,9 +7,6 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
-/**
- * Cria as instâncias do Retrofit compartilhando um único OkHttpClient.
- */
 object RetrofitFactory {
 
     private const val TIMEOUT_SECONDS = 15L

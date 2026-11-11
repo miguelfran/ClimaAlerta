@@ -8,7 +8,6 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 
-/** Cidades favoritas (monitoradas) do usuário, observáveis por todas as telas. */
 interface FavoritesRepository {
     val favorites: StateFlow<List<City>>
     fun toggleFavorite(city: City)
@@ -32,7 +31,6 @@ class FavoritesRepositoryImpl(
         localDataSource.save(_favorites.value)
     }
 
-    /** No primeiro uso, salva algumas capitais para o painel já começar com dados. */
     private fun loadInitialFavorites(): List<City> =
         localDataSource.load() ?: DefaultCities.cities.also { localDataSource.save(it) }
 }

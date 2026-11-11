@@ -12,7 +12,6 @@ import br.com.fiap.climaalerta.ui.theme.ClimaAlertaTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // Ícones claros na barra de status, pois todas as telas têm o topo em azul.
         enableEdgeToEdge(statusBarStyle = SystemBarStyle.dark(Color.TRANSPARENT))
         setContent {
             ClimaAlertaTheme {

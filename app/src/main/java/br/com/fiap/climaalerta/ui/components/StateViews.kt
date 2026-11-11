@@ -29,10 +29,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import br.com.fiap.climaalerta.R
 
-/**
- * Bloco genérico de mensagem (ícone + título + texto + ação opcional).
- * Base para os estados inicial, vazio e de erro.
- */
 @Composable
 fun MessageView(
     icon: ImageVector,
@@ -81,7 +77,6 @@ fun MessageView(
     }
 }
 
-/** Estado de carregamento. */
 @Composable
 fun LoadingView(message: String, modifier: Modifier = Modifier) {
     Column(
@@ -100,7 +95,6 @@ fun LoadingView(message: String, modifier: Modifier = Modifier) {
     }
 }
 
-/** Estado de erro com botão para tentar novamente. */
 @Composable
 fun ErrorView(message: String, onRetry: () -> Unit, modifier: Modifier = Modifier) {
     MessageView(

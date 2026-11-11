@@ -29,9 +29,6 @@ import br.com.fiap.climaalerta.ui.screens.search.SearchScreen
 import br.com.fiap.climaalerta.ui.screens.splash.SplashDestination
 import br.com.fiap.climaalerta.ui.screens.splash.SplashScreen
 
-/**
- * Raiz da interface: Scaffold com a barra inferior (só nas telas principais) e o NavHost.
- */
 @Composable
 fun ClimaAlertaApp(navController: NavHostController = rememberNavController()) {
     val backStackEntry by navController.currentBackStackEntryAsState()
@@ -39,7 +36,6 @@ fun ClimaAlertaApp(navController: NavHostController = rememberNavController()) {
     val currentTopLevel = TopLevelDestination.entries.firstOrNull { currentDestination.isOn(it) }
 
     Scaffold(
-        // As telas internas tratam seus próprios insets (cada uma tem seu Scaffold com TopAppBar).
         contentWindowInsets = WindowInsets(0, 0, 0, 0),
         bottomBar = {
             if (currentTopLevel != null) {
@@ -137,7 +133,6 @@ private fun AppNavHost(navController: NavHostController, modifier: Modifier = Mo
     }
 }
 
-/** Navega entre abas preservando o estado de cada uma e sem empilhar telas repetidas. */
 private fun NavHostController.navigateToTopLevel(destination: TopLevelDestination) {
     navigate(destination.route) {
         popUpTo<HomeRoute> { saveState = true }

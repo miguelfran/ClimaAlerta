@@ -15,9 +15,6 @@ import br.com.fiap.climaalerta.ui.screens.onboarding.OnboardingViewModel
 import br.com.fiap.climaalerta.ui.screens.search.SearchViewModel
 import br.com.fiap.climaalerta.ui.screens.splash.SplashViewModel
 
-/**
- * Fábrica única de ViewModels: injeta as dependências do [br.com.fiap.climaalerta.di.AppContainer].
- */
 object AppViewModelProvider {
     val Factory: ViewModelProvider.Factory = viewModelFactory {
         initializer {

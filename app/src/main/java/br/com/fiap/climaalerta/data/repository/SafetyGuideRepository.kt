@@ -4,7 +4,6 @@ import br.com.fiap.climaalerta.data.local.SafetyGuideLocalDataSource
 import br.com.fiap.climaalerta.domain.model.EmergencyContact
 import br.com.fiap.climaalerta.domain.model.SafetyTopic
 
-/** Orientações de segurança e telefones úteis. */
 interface SafetyGuideRepository {
     fun getEmergencyContacts(): List<EmergencyContact>
     fun getSafetyTopics(): List<SafetyTopic>

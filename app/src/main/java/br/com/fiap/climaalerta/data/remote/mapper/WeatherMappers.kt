@@ -12,10 +12,8 @@ import br.com.fiap.climaalerta.domain.model.WeatherForecast
 import java.time.LocalDate
 import kotlin.math.roundToInt
 
-/** Lançada quando o WebService responde sem os dados mínimos esperados. */
 class InvalidWeatherResponseException(message: String) : IllegalStateException(message)
 
-/** Converte o DTO da Open-Meteo para o modelo de domínio usado pelo app. */
 fun ForecastResponseDto.toDomain(): WeatherForecast {
     val currentDto = current ?: throw InvalidWeatherResponseException("Resposta sem dados atuais")
     val dailyDto = daily ?: throw InvalidWeatherResponseException("Resposta sem previsão diária")
@@ -47,7 +45,6 @@ private fun DailyForecastDto.toDomain(): List<DailyForecast> {
             precipitationProbability = precipitationProbabilityMax.valueAt(index).roundToInt(),
             maxWindSpeed = windSpeedMax.valueAt(index),
             uvIndex = uvIndexMax.valueAt(index),
-            // Sem dado de umidade, assume 100% para não gerar alerta falso de tempo seco.
             minHumidity = relativeHumidityMin?.getOrNull(index)?.roundToInt() ?: 100
         )
     }
@@ -55,7 +52,6 @@ private fun DailyForecastDto.toDomain(): List<DailyForecast> {
 
 private fun List<Double?>?.valueAt(index: Int): Double = this?.getOrNull(index) ?: 0.0
 
-/** Converte um resultado da busca em [City]; descarta registros incompletos. */
 fun GeocodingResultDto.toDomainOrNull(): City? {
     val safeId = id ?: return null
     val safeName = name ?: return null

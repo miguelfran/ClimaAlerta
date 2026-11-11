@@ -53,9 +53,6 @@ import br.com.fiap.climaalerta.ui.components.SectionTitle
 import br.com.fiap.climaalerta.ui.model.icon
 import br.com.fiap.climaalerta.ui.theme.Dimens
 
-/**
- * Orientações: telefones de emergência, como agir em cada evento e preferências do app.
- */
 @Composable
 fun GuideScreen(
     viewModel: GuideViewModel = viewModel(factory = AppViewModelProvider.Factory)
@@ -83,7 +80,6 @@ fun GuideScreen(
             item(key = "contactsTitle") {
                 SectionTitle(text = stringResource(R.string.guide_contacts_title))
             }
-            // Telefones em duas colunas
             items(items = uiState.contacts.chunked(2), key = { row -> row.first().phoneNumber }) { row ->
                 Row(horizontalArrangement = Arrangement.spacedBy(Dimens.SmallSpacing)) {
                     row.forEach { contact ->
@@ -190,7 +186,6 @@ private fun EmergencyContactCard(
     }
 }
 
-/** Card expansível com as dicas de segurança de um evento. */
 @Composable
 private fun SafetyTopicCard(topic: SafetyTopic, modifier: Modifier = Modifier) {
     var expanded by rememberSaveable(topic.type) { mutableStateOf(false) }

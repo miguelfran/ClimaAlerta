@@ -28,10 +28,6 @@ data class AlertsUiState(
     val isRefreshing: Boolean = false
 )
 
-/**
- * Central de alertas: reúne os alertas de todas as cidades monitoradas,
- * ordenados do mais grave para o menos grave, com filtro por tipo de evento.
- */
 class AlertsViewModel(
     private val favoritesRepository: FavoritesRepository,
     private val weatherRepository: WeatherRepository

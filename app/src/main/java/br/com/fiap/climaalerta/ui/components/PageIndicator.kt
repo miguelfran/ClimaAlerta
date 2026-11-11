@@ -16,7 +16,6 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
-/** Indicador de páginas (bolinhas) com animação na página atual. */
 @Composable
 fun PageIndicator(
     pageCount: Int,

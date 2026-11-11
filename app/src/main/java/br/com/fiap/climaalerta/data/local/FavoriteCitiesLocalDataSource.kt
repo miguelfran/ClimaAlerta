@@ -7,9 +7,6 @@ import com.google.gson.Gson
 import com.google.gson.JsonParseException
 import com.google.gson.reflect.TypeToken
 
-/**
- * Persiste localmente (SharedPreferences + JSON) as cidades favoritas/monitoradas.
- */
 class FavoriteCitiesLocalDataSource(
     context: Context,
     private val gson: Gson = Gson()
@@ -18,7 +15,6 @@ class FavoriteCitiesLocalDataSource(
     private val preferences = context.getSharedPreferences(PREFERENCES_NAME, Context.MODE_PRIVATE)
     private val listType = object : TypeToken<List<StoredCity>>() {}.type
 
-    /** Retorna null quando o app ainda não salvou nenhuma lista (primeiro uso). */
     fun load(): List<City>? {
         val json = preferences.getString(KEY_FAVORITE_CITIES, null) ?: return null
         return try {
@@ -33,7 +29,6 @@ class FavoriteCitiesLocalDataSource(
         preferences.edit { putString(KEY_FAVORITE_CITIES, json) }
     }
 
-    /** Formato salvo em disco, separado do modelo de domínio. */
     private data class StoredCity(
         val id: Long,
         val name: String,

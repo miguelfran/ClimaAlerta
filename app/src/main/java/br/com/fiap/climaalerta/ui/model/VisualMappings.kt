@@ -30,11 +30,6 @@ import br.com.fiap.climaalerta.ui.theme.RiskGreatDanger
 import br.com.fiap.climaalerta.ui.theme.RiskNone
 import br.com.fiap.climaalerta.ui.theme.RiskPotentialDanger
 
-/*
- * Mapeamentos visuais (ícones e cores) dos modelos de domínio.
- * Ficam na camada de UI para o domínio não depender do Compose.
- */
-
 fun WeatherCondition.icon(isDay: Boolean = true): ImageVector = when (this) {
     WeatherCondition.CLEAR -> if (isDay) Icons.Filled.WbSunny else Icons.Filled.NightsStay
     WeatherCondition.PARTLY_CLOUDY -> Icons.Filled.WbCloudy
@@ -66,7 +61,6 @@ fun RiskLevel.icon(): ImageVector = when (this) {
     RiskLevel.GREAT_DANGER -> Icons.Filled.Report
 }
 
-/** Cor de destaque de cada nível de risco. */
 val RiskLevel.color: Color
     get() = when (this) {
         RiskLevel.NONE -> RiskNone
@@ -75,6 +69,5 @@ val RiskLevel.color: Color
         RiskLevel.GREAT_DANGER -> RiskGreatDanger
     }
 
-/** Cor do texto/ícone sobre [color], garantindo contraste. */
 val RiskLevel.onColor: Color
     get() = if (this == RiskLevel.POTENTIAL_DANGER) OnRiskDark else OnRiskLight

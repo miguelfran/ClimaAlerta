@@ -51,9 +51,6 @@ import br.com.fiap.climaalerta.ui.model.onColor
 import br.com.fiap.climaalerta.ui.theme.BarColors
 import br.com.fiap.climaalerta.ui.theme.Dimens
 
-/**
- * Detalhe da cidade: tempo atual, alertas ativos com orientações e previsão de 7 dias.
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CityDetailScreen(
@@ -154,7 +151,6 @@ private fun CityDetailContent(cityWeather: CityWeather) {
     }
 }
 
-/** Faixa com a situação geral da cidade na cor do nível de risco. */
 @Composable
 private fun RiskStatusBanner(level: RiskLevel, alertCount: Int, modifier: Modifier = Modifier) {
     Card(

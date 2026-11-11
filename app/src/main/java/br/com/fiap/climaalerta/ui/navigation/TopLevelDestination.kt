@@ -13,7 +13,6 @@ import androidx.compose.material.icons.outlined.TravelExplore
 import androidx.compose.ui.graphics.vector.ImageVector
 import br.com.fiap.climaalerta.R
 
-/** Telas principais acessadas pela barra de navegação inferior. */
 enum class TopLevelDestination(
     val route: Any,
     val selectedIcon: ImageVector,

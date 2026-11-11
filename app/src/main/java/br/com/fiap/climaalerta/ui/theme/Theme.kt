@@ -60,10 +60,6 @@ private val DarkColorScheme = darkColorScheme(
     surfaceContainerHighest = DarkSurfaceContainerHighest
 )
 
-/**
- * Tema do app. Usa cores próprias (sem cor dinâmica) para manter a identidade
- * e a leitura consistente da escala de risco.
- */
 @Composable
 fun ClimaAlertaTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),

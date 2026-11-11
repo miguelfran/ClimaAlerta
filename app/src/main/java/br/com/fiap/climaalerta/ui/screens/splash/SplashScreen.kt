@@ -43,9 +43,6 @@ import br.com.fiap.climaalerta.ui.theme.BrandBlueDark
 import br.com.fiap.climaalerta.ui.theme.ClimaAlertaTheme
 import kotlinx.coroutines.delay
 
-/**
- * Splash: exibe o logo e, após alguns segundos, segue para a Introdução ou para o Painel.
- */
 @Composable
 fun SplashScreen(
     onSplashFinished: (SplashDestination) -> Unit,
@@ -53,7 +50,6 @@ fun SplashScreen(
 ) {
     val currentOnSplashFinished by rememberUpdatedState(onSplashFinished)
 
-    // A contagem começa quando a Splash é desenhada, para o logo ficar visível mesmo em um cold start lento.
     LaunchedEffect(Unit) {
         withFrameNanos { }
         delay(SplashViewModel.SPLASH_DURATION_MILLIS)
