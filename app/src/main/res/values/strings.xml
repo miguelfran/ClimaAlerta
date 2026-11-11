@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:locale="pt">
+    <!-- Geral -->
+    <string name="app_name">ClimaAlerta</string>
+    <string name="app_tagline">Alertas climáticos para proteger você e sua comunidade</string>
+
+    <!-- Splash -->
+    <string name="splash_logo_description">Logo do ClimaAlerta: nuvem com raio</string>
+    <string name="splash_footer">Global Solution FIAP • CitizenTech</string>
+
+    <!-- Ações -->
+    <string name="action_back">Voltar</string>
+    <string name="action_retry">Tentar novamente</string>
+    <string name="action_refresh">Atualizar</string>
+    <string name="action_clear">Limpar</string>
+    <string name="action_favorite">Favoritar cidade</string>
+    <string name="action_unfavorite">Remover dos favoritos</string>
+    <string name="action_undo">Desfazer</string>
+
+    <!-- Erros -->
+    <string name="error_title">Não foi possível carregar</string>
+    <string name="error_timeout">O serviço de clima demorou para responder. Tente novamente em instantes.</string>
+    <string name="error_no_connection">Sem conexão com a internet. Verifique sua rede e tente novamente.</string>
+    <string name="error_server">O serviço de clima está indisponível no momento. Tente novamente mais tarde.</string>
+    <string name="error_request">Não conseguimos consultar os dados desta cidade.</string>
+    <string name="error_unexpected">Ocorreu um erro inesperado ao carregar os dados.</string>
+
+    <!-- Navegação -->
+    <string name="nav_home">Painel</string>
+    <string name="nav_search">Buscar</string>
+    <string name="nav_alerts">Alertas</string>
+    <string name="nav_guide">Orientações</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_title_1">Alertas climáticos para o cidadão</string>
+    <string name="onboarding_description_1">Chuvas intensas, calor extremo, ventos fortes e tempestades: o ClimaAlerta transforma a previsão do tempo em avisos simples para você se preparar.</string>
+    <string name="onboarding_title_2">Monitore as cidades que importam</string>
+    <string name="onboarding_description_2">Busque qualquer cidade do Brasil, favorite onde você mora, trabalha ou tem família e acompanhe tudo em um só painel.</string>
+    <string name="onboarding_title_3">Saiba como agir e se proteger</string>
+    <string name="onboarding_description_3">Cada alerta traz orientações da Defesa Civil e telefones de emergência para proteger você e sua comunidade.</string>
+    <string name="onboarding_skip">Pular</string>
+    <string name="onboarding_back">Voltar</string>
+    <string name="onboarding_next">Avançar</string>
+    <string name="onboarding_start">Começar</string>
+    <string name="onboarding_dont_show_again">Não mostrar a introdução novamente</string>
+
+    <!-- Painel -->
+    <string name="home_subtitle">Painel de riscos climáticos</string>
+    <string name="home_loading">Consultando a previsão das cidades monitoradas…</string>
+    <string name="home_empty_title">Nenhuma cidade monitorada</string>
+    <string name="home_empty_message">Busque e favorite as cidades onde você mora, trabalha ou tem família para acompanhar os alertas.</string>
+    <string name="home_empty_action">Buscar cidades</string>
+    <string name="home_filter_placeholder">Filtrar cidades monitoradas</string>
+    <string name="home_section_cities">Cidades monitoradas (%1$d)</string>
+    <string name="home_no_match_title">Nenhuma cidade neste filtro</string>
+    <string name="home_no_match_message">Altere o texto da busca ou escolha outro nível de risco.</string>
+    <string name="home_city_removed">%1$s foi removida das cidades monitoradas</string>
+    <string name="home_summary_title">Situação das suas cidades</string>
+    <string name="home_summary_cities_with_alerts" tools:ignore="PluralsCandidate">%1$d de %2$d cidades com alerta</string>
+    <string name="home_summary_highest_risk">Maior risco previsto</string>
+    <string name="home_summary_city">em %1$s</string>
+    <string name="home_summary_all_clear">Nenhum alerta previsto para os próximos 7 dias.</string>
+    <string name="filter_all_cities">Todas</string>
+    <string name="temperature_range">↑%1$s  ↓%2$s</string>
+    <plurals name="alerts_count">
+        <item quantity="one">%d alerta</item>
+        <item quantity="other">%d alertas</item>
+    </plurals>
+
+    <!-- Busca -->
+    <string name="search_title">Buscar cidade</string>
+    <string name="search_placeholder">Digite o nome da cidade</string>
+    <string name="search_initial_title">Encontre sua cidade</string>
+    <string name="search_initial_message" tools:ignore="PluralsCandidate">Digite pelo menos %1$d letras para buscar cidades brasileiras e ver a previsão e os alertas.</string>
+    <string name="search_loading">Buscando cidades…</string>
+    <string name="search_empty_title">Nenhuma cidade encontrada</string>
+    <string name="search_empty_message">Não encontramos resultados para \"%1$s\". Confira a grafia e tente novamente.</string>
+    <string name="search_population">População: %1$s</string>
+    <plurals name="search_results_count">
+        <item quantity="one">%d cidade encontrada</item>
+        <item quantity="other">%d cidades encontradas</item>
+    </plurals>
+
+    <!-- Detalhe -->
+    <string name="detail_loading">Carregando a previsão de %1$s…</string>
+    <string name="detail_now">Agora</string>
+    <string name="detail_feels_like">Sensação térmica de %1$s</string>
+    <string name="detail_updated_at">Atualizado às %1$s</string>
+    <string name="detail_alerts_title">Alertas ativos</string>
+    <string name="detail_no_alerts">Nenhum alerta para os próximos 7 dias. Continue acompanhando a previsão.</string>
+    <string name="detail_forecast_title">Previsão para 7 dias</string>
+    <string name="detail_status_safe">Sem riscos climáticos previstos</string>
+    <string name="detail_data_source">Dados meteorológicos: Open-Meteo (open-meteo.com). Os níveis de risco são calculados pelo app com base nos critérios de aviso do INMET e não substituem os comunicados oficiais da Defesa Civil.</string>
+    <plurals name="detail_status_alerts">
+        <item quantity="one">%1$s: %2$d alerta ativo</item>
+        <item quantity="other">%1$s: %2$d alertas ativos</item>
+    </plurals>
+    <string name="metric_humidity">Umidade</string>
+    <string name="metric_wind">Vento</string>
+    <string name="metric_rain_today">Chuva hoje</string>
+    <string name="metric_uv">UV máx.</string>
+    <string name="metric_rain_probability">Chance de chuva</string>
+
+    <!-- Card de alerta -->
+    <string name="alert_show_tips">Mostrar orientações</string>
+    <string name="alert_hide_tips">Ocultar orientações</string>
+    <string name="alert_how_to_act">Como agir</string>
+
+    <!-- Alertas -->
+    <string name="alerts_title">Alertas</string>
+    <string name="alerts_subtitle">Riscos previstos nas cidades monitoradas</string>
+    <string name="alerts_loading">Avaliando os riscos das cidades monitoradas…</string>
+    <string name="alerts_empty_title">Nenhum alerta por aqui</string>
+    <string name="alerts_empty_message">Não há riscos previstos para este filtro nos próximos 7 dias.</string>
+    <string name="filter_all_alerts">Todos</string>
+
+    <!-- Orientações -->
+    <string name="guide_title">Orientações</string>
+    <string name="guide_subtitle">Como se proteger em eventos extremos</string>
+    <string name="guide_header_title">Prevenção salva vidas</string>
+    <string name="guide_header_message">Em caso de risco iminente, ligue para a Defesa Civil (199) ou para os Bombeiros (193).</string>
+    <string name="guide_contacts_title">Telefones de emergência</string>
+    <string name="guide_topics_title">Como agir em cada situação</string>
+    <string name="guide_settings_title">Preferências</string>
+    <string name="guide_call">Ligar</string>
+    <string name="guide_show_onboarding">Exibir introdução ao abrir o app</string>
+    <string name="guide_show_onboarding_description">Mostra novamente as telas de apresentação na próxima abertura.</string>
+    <string name="guide_about_title">Sobre o ClimaAlerta</string>
+    <string name="guide_about_message">Solução CitizenTech que transforma dados meteorológicos abertos em alertas simples e orientações práticas para cidadãos, comunidades e pequenos produtores.</string>
+    <string name="guide_about_developer">Desenvolvido por Miguel Franquilino Castro Leite (RM98590) • Versão 1.0</string>
+    <string name="ods_3">ODS 3</string>
+    <string name="ods_11">ODS 11</string>
+    <string name="ods_13">ODS 13</string>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Android 12+: a splash do sistema usa o azul da marca e emenda com a Splash do app. -->
+    <style name="Theme.ClimaAlerta" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowSplashScreenBackground">@color/brand_blue</item>
+    </style>
+</resources>

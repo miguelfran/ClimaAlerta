@@ -1,0 +1,5 @@
+# Mantém os finais de linha corretos dos scripts do Gradle em qualquer sistema
+gradlew text eol=lf
+*.bat text eol=crlf
+*.jar binary
+*.png binary
