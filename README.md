@@ -222,10 +222,6 @@ Pela linha de comando:
 
 ---
 
-## 🎥 Vídeo pitch
-
-🔗 _Adicionar o link do vídeo no YouTube (público) aqui._
-
 ## 🔗 Repositório
 
 🔗 https://github.com/miguelfran/ClimaAlerta
