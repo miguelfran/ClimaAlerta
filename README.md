@@ -1,4 +1,4 @@
-# ClimaAlerta 🌩️
+# ClimaAlerta 
 
 **Alertas climáticos para proteger você e sua comunidade.**
 
@@ -6,7 +6,7 @@ Aplicativo Android desenvolvido em **Kotlin + Jetpack Compose** para a **Global 
 
 ---
 
-## 📌 Descrição da solução
+##  Descrição da solução
 
 Eventos climáticos extremos (chuvas intensas, enchentes, ondas de calor, tempestades, ventos fortes e tempo seco) afetam milhões de brasileiros todos os anos. A previsão do tempo existe e é aberta, mas costuma chegar ao cidadão em formato técnico (milímetros, km/h, códigos meteorológicos), o que dificulta entender **o risco real** e **o que fazer**.
 
@@ -19,7 +19,7 @@ O **ClimaAlerta** transforma dados meteorológicos abertos em **alertas simples 
 
 Público-alvo: moradores de áreas de risco, famílias com idosos e crianças, pequenos produtores rurais e agentes comunitários que precisam se antecipar a eventos climáticos.
 
-## 🌎 Tema da Global Solution
+##  Tema da Global Solution
 
 **CitizenTech: tecnologia criada a partir das necessidades reais das pessoas.** O ClimaAlerta segue a sugestão do desafio de *"sistemas de previsão de enchentes, deslizamentos, incêndios e ondas de calor com alertas direcionados à população"*.
 
@@ -33,7 +33,7 @@ Objetivos de Desenvolvimento Sustentável (ONU) relacionados:
 
 ---
 
-## ✅ Requisitos da avaliação × implementação
+##  Requisitos da avaliação × implementação
 
 | # | Requisito | Onde está no projeto |
 |---|-----------|----------------------|
@@ -47,7 +47,7 @@ Objetivos de Desenvolvimento Sustentável (ONU) relacionados:
 
 ---
 
-## 🧭 Fluxo de telas
+##  Fluxo de telas
 
 ```mermaid
 flowchart LR
@@ -91,7 +91,7 @@ flowchart LR
 
 ---
 
-## 🌐 API utilizada
+##  API utilizada
 
 **[Open-Meteo](https://open-meteo.com/)**: API REST pública, gratuita, **sem necessidade de chave**, com dados de modelos meteorológicos globais e nacionais.
 
@@ -121,11 +121,11 @@ Implementadas em `domain/usecase/EvaluateClimateAlertsUseCase.kt` e cobertas por
 
 Quando o mesmo evento aparece em vários dias, ele é **consolidado** em um único alerta com o pior nível, o valor de pico e o período (ex.: *"3 dias entre 11/11 e 17/11"*).
 
-> ⚠️ Os níveis de risco são calculados pelo app e **não substituem os comunicados oficiais** da Defesa Civil e do INMET.
+>  Os níveis de risco são calculados pelo app e **não substituem os comunicados oficiais** da Defesa Civil e do INMET.
 
 ---
 
-## 🏗️ Arquitetura
+##  Arquitetura
 
 O projeto segue **MVVM + Repository**, com separação em três camadas e fluxo de dados unidirecional:
 
@@ -205,7 +205,7 @@ Exemplo de reutilização: `AlertCard` aparece no Detalhe e na central de Alerta
 
 ---
 
-## ▶️ Como executar
+##  Como executar
 
 1. Abra a pasta do projeto no **Android Studio** (versão recente, com Android SDK 36).
 2. Aguarde a sincronização do Gradle.
@@ -222,11 +222,11 @@ Pela linha de comando:
 
 ---
 
-## 🔗 Repositório
+##  Repositório
 
-🔗 https://github.com/miguelfran/ClimaAlerta
+ https://github.com/miguelfran/ClimaAlerta
 
-## 👨‍💻 Desenvolvedor
+##  Desenvolvedor
 
 | Nome | RM |
 |------|----|
